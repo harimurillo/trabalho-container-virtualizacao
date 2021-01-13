@@ -1,0 +1,95 @@
+.sidebar {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background: #fff;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sidebar .nav {
+    margin-top: 20px;
+  }
+  
+  .sidebar .nav li.active>a,
+  .sidebar .nav li.active>a i {
+    color: #fff;
+  }
+  
+  .sidebar .nav p {
+    margin: 0;
+    line-height: 30px;
+    font-size: 14px;
+    position: relative;
+    display: block;
+    height: auto;
+    white-space: nowrap;
+  }
+  
+  .sidebar .nav li a,
+  .sidebar .nav li .dropdown-menu a {
+    margin: 10px 15px 0;
+    border-radius: 3px;
+    color: #3C4858;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: capitalize;
+    font-size: 13px;
+    padding: 10px 15px;
+  }
+  
+  .sidebar .logo {
+    padding: 15px 0px;
+    margin: 0;
+    display: block;
+    position: relative;
+    z-index: 4;
+  }
+  
+  .sidebar .logo:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    height: 1px;
+    width: calc(100% - 30px);
+    background-color: rgba(180, 180, 180, 0.3);
+  }
+  
+  .sidebar[data-color="purple"] li.active>a {
+    background-color: #9c27b0;
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
+  }
+  
+  .wrapper {
+    position: relative;
+    top: 0;
+    height: 100vh;
+  }
+  
+  
+  .nopadding{
+    padding: 0px !important; 
+  }
+  
+  body, html, .containerDrone, .row{
+    height: 100%;
+    width: 100%;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  .btn-light:hover {
+    color: #0000ff94;
+}
+.btn-light{
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.center{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}

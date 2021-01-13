@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Controle Financeiro!</title>
+    <meta charset="utf-8">
+   </head>
+
+   <div class="row col-md-12 nopadding" style="margin: 0px;">
+      <div class="col-md-2 bloco1 nopadding">
+        <app-menu></app-menu>
+      </div>
+      <div class="col-md-10 nopadding" style="background-color: #eee;" id="bloco2"> 
+        <div class="main-panel">
+          <div class="content">
+            <div class="container-fluid">
+              <div class="main-panel">
+                    <div class="card text-center" style="margin-top:60px">
+                      <div class="card-header">
+                        Lista de Despesas
+                      </div>
+                      <div class="card-body">
+                        <table class="table table-hover" *ngIf="responseDespesas">
+                          <thead>
+                            <tr>
+                              <th scope="col">Descrição</th>
+                              <th scope="col">Data Despesa</th>
+                              <th scope="col">Valor</th>
+                              <th scope="col">Categoria</th>
+                              <th scope="col">Alterar</th>
+                              <th scope="col">Excluir</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let despesas of responseDespesas">
+                              <td>{{despesas.descricao}}</td>
+                              <td>{{despesas.dataDespesa}}</td>
+                              <td>{{despesas.valor}}</td>
+                              <td>{{despesas.categoria}}</td>
+                              
+                              <td><a routerLink="update/{{despesas.id}}">
+                                <img src="../assets/img/editar.png">
+                              </a></td>
+                              <td><a routerLink="delete/{{despesas.id}}">
+                                <img src="../assets/img/lixo.png">
+                              </a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</html>

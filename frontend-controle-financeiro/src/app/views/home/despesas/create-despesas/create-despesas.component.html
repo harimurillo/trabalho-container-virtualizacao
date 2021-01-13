@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>Controle Financeiro!</title>
+    <meta charset="utf-8">
+   </head>
+
+    <div class="row col-md-12 nopadding" style="margin: 0px;">
+      <div class="col-md-2 bloco1 nopadding">
+        <app-menu></app-menu>
+      </div>
+      <div class="col-md-10 nopadding" style="background-color: #eee;" id="bloco2"> 
+        <div class="main-panel">
+          <div class="content">
+            <div class="container-fluid">
+              <div class="main-panel">
+                
+                    <div class="card text-center" style="margin-top:60px">
+                      <div class="card-header">
+                        Cadastro de Despesas
+                      </div>
+                      <div style="padding-top: 15px" class="col-md-12">
+                        <div class="form-group row">
+                          <label for="inputDescricao" class="col-sm-2 col-form-label" style="text-align: end;">Descrição:</label>
+                          <div class="col-sm-10">
+                            <input class="form-control" id="inputDescricao" placeholder=Nome [(ngModel)]="request.descricao">
+                          </div>
+                        </div> 
+                        <div class="form-group row">
+                          <label for="inputData" class="col-sm-2 col-form-label" style="text-align: end;">Data Despesa:</label>
+                          <div class="col-sm-10">
+                            <input class="form-control" id="inputData" placeholder="Data Despesa" [(ngModel)]="request.dataDespesa">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="inputValor" class="col-sm-2 col-form-label" style="text-align: end;">Valor:</label>
+                          <div class="col-sm-10">
+                            <input  class="form-control" id="inputValor" placeholder="Valor" [(ngModel)]="request.valor">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="in" class="col-sm-2 col-form-label" style="text-align: end;">Categoria:</label>
+                          <div class="col-sm-10">
+                            <input  class="form-control" id="inputCategoria" placeholder="Valor" [(ngModel)]="request.categoria">
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <div class="col-sm-12">
+                            <button type="submit" class="btn btn-light"(click)="save()">Cadastrar Despesa</button>
+                          </div>
+                        </div>
+
+                        <div *ngIf="response">
+                          <div class="alert alert-success" role="alert" *ngIf="response.descricao" style="margin-right: 15px; margin-left: 15px;"> 
+                            Despesa {{response.descricao}} cadastrada com sucesso!
+                          </div>
+                          <div class="alert alert-danger" role="alert" *ngIf="!response.descricao" style="margin-right: 15px; margin-left: 15px;"> 
+                            Erro no cadastro!
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</html>

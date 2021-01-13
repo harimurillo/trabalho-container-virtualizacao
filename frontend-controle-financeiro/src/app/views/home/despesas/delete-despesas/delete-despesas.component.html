@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Controle Financeiro!</title>
+    <meta charset="utf-8">
+   </head>
+
+   <div class="row col-md-12 nopadding" style="margin: 0px;">
+      <div class="col-md-2 bloco1 nopadding">
+        <app-menu></app-menu>
+      </div>
+      <div class="col-md-10 nopadding" style="background-color: #eee;" id="bloco2"> 
+        <div class="main-panel">
+          <div class="content">
+            <div class="container-fluid">
+              <div class="main-panel">
+                    <div class="card text-center" style="margin-top:60px">
+                      <div class="card-header">
+                        Excluir Despesas
+                      </div>
+                      <div style="padding-top: 15px">
+                        <div class="form-group row center" style="padding-left: 30px; ">
+                          <p>Realmente deseja excluir a despesa {{despesa.descricao}}?</p>
+                        </div>
+
+                        <div class="form-group row center"> 
+                          <div class="col-sm-5">
+                            <button type="button" (click)="delete()" class="btn btn-success">Sim</button>
+                          </div>
+                          <div class="col-sm-5">
+                            <button type="button" routerLink="/lista" class="btn btn-danger">Não</button>
+                          </div>
+                        </div>
+
+                        <div *ngIf="response">
+                          <div class="alert alert-success" role="alert"  style="margin-right: 15px; margin-left: 15px;"> 
+                            Despesa removida com sucesso! 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</html>
